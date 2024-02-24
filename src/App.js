@@ -20,6 +20,18 @@ function App() {
     setInput('');
   };
 
+  const squareRoot = () => {
+    setInput(Math.sqrt(parseFloat(input)).toString());
+  };
+
+  const power = () => {
+    setInput(Math.pow(parseFloat(input), 2).toString());
+  };
+
+  const logarithm = () => {
+    setInput(Math.log10(parseFloat(input)).toString());
+  };
+
   return (
     <div className="App">
       <div className="calculator">
@@ -42,6 +54,9 @@ function App() {
           <button value="0" onClick={handleInput}>0</button>
           <button value="." onClick={handleInput}>.</button>
           <button onClick={calculate}>=</button>
+          <button onClick={squareRoot}>&radic;</button>
+          <button onClick={power}>x<sup>2</sup></button>
+          <button onClick={logarithm}>log</button>
         </div>
       </div>
     </div>
